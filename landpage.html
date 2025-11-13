@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Personal Portfolio</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+  body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    line-height: 1.6;
+  }
+
+  header {
+    background: rgba(255 255 255 / 0.1);
+    backdrop-filter: blur(10px);
+    padding: 3rem 1.5rem 5rem;
+    text-align: center;
+  }
+
+  header img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #fff;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    margin-bottom: 1.25rem;
+    transition: transform 0.3s ease;
+  }
+  header img:hover {
+    transform: scale(1.05);
+  }
+
+header h1 {
+  margin: 0.5rem 0 0.3rem;
+  font-weight: 700;
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+}
+
+header p {
+  margin: 0;
+  font-weight: 400;
+  font-size: 1.1rem;
+  color: #e0d7f7;
+}
+
+.contacts {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.contact-item {
+  background: rgba(255 255 255 / 0.15);
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  min-width: 140px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease;
+  cursor: default;
+}
+.contact-item:hover {
+  background: rgba(255 255 255 / 0.3);
+}
+.contact-item a {
+  color: #eee;
+  text-decoration: none;
+  font-weight: 600;
+  word-wrap: break-word;
+}
+
+main {
+  max-width: 960px;
+  margin: 3rem auto 5rem;
+  padding: 0 1.5rem;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+section h2 {
+  font-weight: 700;
+  font-size: 2rem;
+  border-bottom: 3px solid #9f7aea;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+.skills-list, .projects-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  justify-content: center;
+}
+
+.skill-item, .project-item {
+  background: rgba(255 255 255 / 0.1);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  min-width: 120px;
+  flex: 1 1 120px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  cursor: default;
+}
+.skill-item:hover, .project-item:hover {
+  background: rgba(255 255 255 / 0.25);
+}
+
+.project-item h3 {
+  margin: 0 0 0.75rem;
+}
+.project-item p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #d3cbff;
+}
+.resume-link {
+  display: block;
+  max-width: 280px;
+  margin: 3rem auto 0;
+  text-align: center;
+}
+.resume-link a {
+  background: #9f7aea;
+  padding: 0.9rem 2.5rem;
+  border-radius: 50px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-decoration: none;
+  box-shadow: 0 6px 15px rgba(159,122,234,0.6);
+  transition: background-color 0.3s ease;
+}
+.resume-link a:hover {
+  background: #7c56d9;
+}
+
+@media (max-width: 480px) {
+  .contacts {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+  .skills-list, .projects-list {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+</style>
+</head>
+<body>
+<header>
+  <img src="https://i.pravatar.cc/150?img=12" alt="Profile picture of John Doe" />
+  <h1>John Doe</h1>
+  <p>Front-End Developer & Designer</p>
+  <div class="contacts" aria-label="Contact Information">
+    <div class="contact-item" aria-label="Email address">
+      <a href="mailto:john.doe@example.com" title="Send Email">john.doe@example.com</a>
+    </div>
+    <div class="contact-item" aria-label="Phone number">
+      <a href="tel:+1234567890" title="Call Phone">‪+91 1234567890‬</a>
+    </div>
+    <div class="contact-item" aria-label="LinkedIn profile">
+      <a href="https://linkedin.com/in/johndoe" target="_blank" rel="noopener" title="LinkedIn Profile">LinkedIn</a>
+    </div>
+    <div class="contact-item" aria-label="GitHub profile">
+      <a href="https://github.com/johndoe" target="_blank" rel="noopener" title="GitHub Profile">GitHub</a>
+    </div>
+  </div>
+</header>
+<main>
+  <section aria-labelledby="skills-title">
+    <h2 id="skills-title">Skills</h2>
+    <div class="skills-list" role="list">
+      <div class="skill-item" role="listitem" aria-label="HTML5">HTML5</div>
+      <div class="skill-item" role="listitem" aria-label="CSS3">CSS3</div>
+      <div class="skill-item" role="listitem" aria-label="JavaScript">JavaScript</div>
+      <div class="skill-item" role="listitem" aria-label="Responsive Design">Responsive Design</div>
+      <div class="skill-item" role="listitem" aria-label="Git">Git</div>
+      <div class="skill-item" role="listitem" aria-label="Adobe Photoshop">Adobe Photoshop</div>
+    </div>
+  </section>
+  <section aria-labelledby="projects-title">
+    <h2 id="projects-title">Projects</h2>
+    <div class="projects-list" role="list">
+      <article class="project-item" role="listitem">
+        <h3>Portfolio Website</h3>
+        <p>A personal portfolio website showcasing my projects and skills built with HTML, CSS, and JavaScript.</p>
+      </article>
+      <article class="project-item" role="listitem">
+        <h3>Weather App</h3>
+        <p>A real-time weather forecasting app utilizing OpenWeatherMap API and responsive design techniques.</p>
+      </article>
+      <article class="project-item" role="listitem">
+        <h3>Todo List</h3>
+        <p>A dynamic todo list allowing users to add, update, and delete tasks with localStorage support.</p>
+      </article>
+    </div>
+  </section>
+  <div class="resume-link">
+    <a href="https://example.com/johndoe_resume.pdf" target="_blank" rel="noopener" aria-label="View John Doe resume PDF">View Resume</a>
+  </div>
+</main>
+</body>
+</html>
